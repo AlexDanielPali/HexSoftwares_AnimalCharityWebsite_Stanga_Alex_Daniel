@@ -16,10 +16,9 @@
 
 :root {
 
-  /**
-   * colors — BunnyHaven Pastel Palette
+/**
+   * colors
    */
-
   --soft-mint: hsl(180, 45%, 59%);          /* soft mint green — calm, hopeful */
   --warm-cream: hsl(45, 100%, 95%);         /* warm background — soothing base */
   --bunny-brown: hsl(30, 35%, 60%);         /* natural light brown — earthy tone */
@@ -29,34 +28,22 @@
   --cloud-white: hsl(0, 0%, 100%);
   --stone-gray: hsl(0, 0%, 40%);
   --charcoal: hsl(0, 0%, 15%);
-  --shadow-brown: hsla(30, 35%, 40%, 0.3);
-
-  /**
-   * aliases (to match your current variables)
-   */
-  --bright-yellow-crayola: var(--peach-pink);
-  --medium-turquoise: var(--lavender);
-  --silver-chalice: var(--stone-gray);
-  --eerie-black-1: var(--bunny-brown);
-  --eerie-black-2: var(--charcoal);
-  --eerie-black-3: var(--charcoal);
-  --raisin-black: var(--bunny-brown);
-  --granite-gray: var(--stone-gray);
-  --sonic-silver: var(--stone-gray);
-  --pistachio_50: hsla(150, 40%, 85%, 0.5);
-  --baby-powder: var(--warm-cream);
   --light-gray: hsl(0, 0%, 80%);
-  --pistachio: var(--soft-mint);
   --platinum: hsl(0, 0%, 92%);
   --cultured: hsl(0, 0%, 96%);
+  
+  /* Functional color aliases */
+  --primary: var(--soft-mint);
+  --secondary: var(--lavender);
+  --background: var(--warm-cream);
+  --text: var(--charcoal);
+  --accent: var(--leaf-green);
+  
+  /* Transparency variants */
+  --primary-50: hsla(150, 40%, 85%, 0.5);
   --white-60: hsla(0, 0%, 100%, 0.6);
-  --white_50: hsla(0, 0%, 100%, 0.5);
-  --white_10: hsla(0, 0%, 100%, 0.1);
-  --white: var(--cloud-white);
-  --black: var(--charcoal);
-  --jet: var(--bunny-brown);
-
-
+  --white-50: hsla(0, 0%, 100%, 0.5);
+  --white-10: hsla(0, 0%, 100%, 0.1);
   /**
    * typography
    */
@@ -153,11 +140,11 @@ button { cursor: pointer; }
 
 :focus-visible { outline-offset: 4px; }
 
-::selection { background-color: var(--white_10); }
+::selection { background-color: var(--white-10); }
 
 html {
   font-family: var(--ff-roboto);
-  color: var(--granite-gray);
+  color: var(--text);
   font-size: 10px;
   scroll-behavior: smooth;
 }
@@ -173,7 +160,7 @@ body {
 
 ::-webkit-scrollbar-track { background-color: hsl(0, 0%, 95%); }
 
-::-webkit-scrollbar-thumb { background-color: var(--pistachio); }
+::-webkit-scrollbar-thumb { background-color: var(--primary); }
 
 
 
@@ -186,7 +173,7 @@ body {
 .container { padding-inline: 15px; }
 
 .section-subtitle {
-  color: var(--color, var(--pistachio));
+  color: var(--color, var(--primary));
   font-size: var(--fs, var(--fs-8));
   font-family: var(--ff, var(--ff-roboto));
   font-weight: var(--fw-600);
@@ -203,12 +190,12 @@ body {
 
 .h2 {
   font-size: var(--fs-3);
-  color: var(--eerie-black-2);
+  color: var(--text);
 }
 
 .h3 {
   font-size: var(--fs-5);
-  color: var(--eerie-black-2);
+  color: var(--text);
 }
 
 .h4 {
@@ -218,8 +205,8 @@ body {
 
 .btn {
   position: relative;
-  background-color: var(--btn-bg, var(--pistachio));
-  color: var(--white);
+  background-color: var(--btn-bg, var(--primary));
+  color: var(--cloud-white);
   font-weight: var(--fw-600);
   padding: 12px 32px;
   display: flex;
@@ -237,7 +224,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid var(--btn-bg, var(--pistachio));
+  border: 1px solid var(--btn-bg, var(--primary));
   transform: translate(5px, 5px);
   transition: var(--transition-2);
 }
@@ -246,7 +233,7 @@ body {
 
 .btn-secondary { --btn-bg: var(--black); }
 
-.btn-secondary:is(:hover, :focus) { --btn-bg: var(--pistachio); }
+.btn-secondary:is(:hover, :focus) { --btn-bg: var(--primary); }
 
 .btn-outline {
   border: 2px solid var(--white);
@@ -302,7 +289,7 @@ body {
 }
 
 .header.active {
-  background-color: var(--eerie-black-1);
+  background-color: var(--bunny-brown);
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.8);
 }
 
@@ -329,12 +316,12 @@ body {
 
 .navbar {
   position: fixed;
-  background-color: var(--eerie-black-1);
+  background-color: var(--bunny-brown);
   top: 100%;
   left: 0;
   width: 100%;
   height: 100%;
-  outline: 1px solid var(--white_10);
+  outline: 1px solid var(--white-10);
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -393,7 +380,7 @@ body {
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus) { background-color: var(--pistachio); }
+.navbar-link:is(:hover, :focus) { background-color: var(--primary); }
 
 
 
@@ -408,8 +395,8 @@ body {
   background-size: cover;        /* makes image cover the entire section */
   background-position: center;   /* centers the image */
   background-repeat: no-repeat;
-  background-color: var(--eerie-black-1);
-  color: var(--white);
+  background-color: var(--bunny-brown);
+  color: var(--cloud-white);
   min-height: 700px;
   padding-block: 120px 60px;
   display: grid;
@@ -417,7 +404,7 @@ body {
 }
 
 .hero .section-subtitle {
-  --color: var(--white);
+  --color: var(--cloud-white);
   --ff: var(--ff-inter);
   --fs: var(--fs-7);
 }
@@ -446,7 +433,7 @@ body {
 
 .features {
   padding-block-start: 0;
-  background-color: var(--eerie-black-1);
+  background-color: var(--bunny-brown);
 }
 
 .features-list {
@@ -461,7 +448,7 @@ body {
 }
 
 .features-item .item-icon {
-  color: var(--pistachio);
+  color: var(--primary);
   font-size: 5.5rem;
   margin-block-start: 10px;
 } 
@@ -538,8 +525,8 @@ body {
 }
 
 .tab-btn.active {
-  background-color: var(--pistachio);
-  color: var(--white);
+  background-color: var(--primary);
+  color: var(--cloud-white);
 }
 
 .tab-list { margin-block: 25px 50px; }
@@ -571,7 +558,7 @@ body {
 \*-----------------------------------*/
 
 .cta-content {
-  background-color: var(--pistachio);
+  background-color: var(--primary);
   text-align: center;
   padding: 50px 15px;
   margin-block-end: 30px;
@@ -598,7 +585,7 @@ body {
 \*-----------------------------------*/
 
 .service {
-  background-color: var(--baby-powder);
+  background-color: var(--background);
   background-repeat: no-repeat;
   background-position: center top;
   margin-block-start: -200px;
@@ -622,10 +609,10 @@ body {
   transition: var(--transition-2);
 }
 
-.service-card:is(:hover, :focus-within) { outline-color: var(--pistachio); }
+.service-card:is(:hover, :focus-within) { outline-color: var(--primary); }
 
 .service-card .card-icon {
-  color: var(--pistachio);
+  color: var(--primary);
   font-size: 7rem;
   max-width: max-content;
   margin-inline: auto;
@@ -664,15 +651,39 @@ body {
 .donate-list {
   display: grid;
   gap: 60px;
+  position: relative;
+  z-index: 1;
 }
 
-.donate-card { box-shadow: var(--card-shadow); }
+.donate-card { 
+  box-shadow: var(--card-shadow);
+  position: relative;
+  margin-bottom: 30px;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+}
 
-.donate-card .card-banner { background-color: var(--light-gray); }
+.donate-card .card-banner { 
+  background-color: var(--light-gray);
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.donate-card .card-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 
 .donate-card .card-content {
   background-color: var(--white);
   padding: 35px;
+  position: relative;
+  z-index: 2;
 }
 
 .progress-wrapper {
@@ -703,12 +714,12 @@ body {
 .progress {
   height: 6px;
   width: 83%;
-  background-color: var(--pistachio);
+  background-color: var(--primary);
   border-radius: inherit;
 }
 
 .progress-value {
-  color: var(--pistachio);
+  color: var(--primary);
   font-size: var(--fs-7);
   font-weight: var(--fw-600);
 }
@@ -734,73 +745,16 @@ body {
 
 .card-wrapper-text data { font-weight: var(--fw-600); }
 
-.card-wrapper-text .green { color: var(--pistachio); }
+.card-wrapper-text .green { color: var(--primary); }
 
-.card-wrapper-text .yellow { color: var(--bright-yellow-crayola); }
+.card-wrapper-text .yellow { color: var(--peach-pink); }
 
-.card-wrapper-text .cyan { color: var(--medium-turquoise); }
-
-
-
-
-
-/*-----------------------------------*\
-  #TESTIMONIALS
-\*-----------------------------------*/
-
-.testi { background-color: var(--jet); }
-
-.testi-content { padding: var(--section-padding) 15px; }
-
-.testi .section-title {
-  color: var(--white);
-  margin-block: 10px 40px;
-}
-
-.testi-card { color: var(--white); }
-
-.testi-text,
-.testi-name { font-size: var(--fs-8); }
-
-.testi-text,
-.testi-title { font-family: var(--ff-inter); }
-
-.testi-text {
-  padding-block-end: 30px;
-  border-block-end: 1px solid var(--white_10);
-  margin-block: 20px 30px;
-}
-
-.testi-title {
-  color: var(--white_50);
-  font-size: var(--fs-10);
-}
-
-.testi-banner { background-color: var(--light-gray); }
+.card-wrapper-text .cyan { color: var(--secondary); }
 
 
 
 
 
-/*-----------------------------------*\
-  #PARTNER
-\*-----------------------------------*/
-
-.partner { background-color: var(--baby-powder); }
-
-.partner .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
-.partner-logo .color,
-.partner-logo:is(:hover, :focus) .gray { display: none; }
-
-.partner-logo:is(:hover, :focus) .color,
-.partner-logo .gray { display: block; }
 
 
 
@@ -833,17 +787,17 @@ body {
   transition: var(--transition-2);
 }
 
-.event-card:is(:hover, :focus-within) { outline-color: var(--pistachio); }
+.event-card:is(:hover, :focus-within) { outline-color: var(--primary); }
 
 .event-card .card-time {
-  background-color: var(--pistachio);
-  color: var(--white);
+  background-color: var(--primary);
+  color: var(--cloud-white);
   font-weight: var(--fw-600);
   line-height: 1.3;
   max-width: max-content;
   padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 10px 15px var(--pistachio_50);
+  box-shadow: 0 10px 15px var(--primary-50);
 }
 
 .event-card .card-time .month { font-size: 2.1rem; }
@@ -852,7 +806,7 @@ body {
 
 .event-card .card-subtitle {
   margin-block: 30px 5px;
-  color: var(--pistachio);
+  color: var(--primary);
   font-size: var(--fs-8);
   font-weight: var(--fw-600);
   letter-spacing: -1px;
@@ -880,7 +834,7 @@ body {
 
 .insta-post-link {
   position: relative;
-  background-color: var(--eerie-black-1);
+  background-color: var(--bunny-brown);
   overflow: hidden;
 }
 
@@ -892,7 +846,7 @@ body {
 }
 
 .insta-post-link > ion-icon {
-  color: var(--white);
+  color: var(--cloud-white);
   font-size: 5rem;
   position: absolute;
   top: 50%;
@@ -926,15 +880,15 @@ body {
 \*-----------------------------------*/
 
 .footer {
-  background-color: var(--raisin-black);
-  color: var(--white);
+  background-color: var(--bunny-brown);
+  color: var(--cloud-white);
   font-family: var(--ff-inter);
   padding-block: 40px;
 }
 
 .footer .container {
   margin-inline: 15px;
-  background-color: var(--eerie-black-3);
+  background-color: var(--charcoal);
   padding: 20px;
 }
 
