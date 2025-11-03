@@ -1,46 +1,36 @@
-'use strict';
+ // header hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
 
+    hamburger.addEventListener('click', ()=>{
+      mobileMenu.style.display = 'block';
+      mobileMenu.setAttribute('aria-hidden','false');
+    });
+    closeMenu.addEventListener('click', ()=>{
+      mobileMenu.style.display = 'none';
+      mobileMenu.setAttribute('aria-hidden','true');
+    });
 
+    // smooth scrolling
+    function scrollToSection(sel){
+      document.querySelector(sel).scrollIntoView({behavior:'smooth',block:'start'});
+    }
 
-/**
- * navbar toggle
- */
+    // show current year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-const navOpenBtn = document.querySelector("[data-nav-open-btn]");
-const navbar = document.querySelector("[data-navbar]");
-const navCloseBtn = document.querySelector("[data-nav-close-btn]");
+    // keyboard accessible close
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape'){
+        mobileMenu.style.display = 'none';
+        mobileMenu.setAttribute('aria-hidden','true');
+      }
+    });
 
-const navElemArr = [navOpenBtn, navCloseBtn];
-
-for (let i = 0; i < navElemArr.length; i++) {
-  navElemArr[i].addEventListener("click", function () {
-    navbar.classList.toggle("active");
-  });
-}
-
-/**
- * toggle navbar when click any navbar link
- */
-
-const navbarLinks = document.querySelectorAll("[data-nav-link]");
-
-for (let i = 0; i < navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", function () {
-    navbar.classList.remove("active");
-  });
-}
-
-
-
-
-
-/**
- * header active when window scrolled down
- */
-
-const header = document.querySelector("[data-header]");
-
-window.addEventListener("scroll", function () {
-  window.scrollY >= 50 ? header.classList.add("active")
-    : header.classList.remove("active");
-});
+    // reduce motion respect
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if(prefersReduced.matches){
+      // disable smooth scroll if user prefers reduced motion
+      window.scrollTo = function(){};
+    }

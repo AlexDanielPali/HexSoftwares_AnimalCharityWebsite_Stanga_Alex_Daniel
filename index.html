@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BunnyHaven — Give Love & Hope to Every Bunny</title>
+  <meta name="description" content="BunnyHaven — a non-profit rescue organization dedicated to saving, rehabilitating and rehoming rabbits." />
+  <link rel="stylesheet" href="style.css">
+    
+
+  
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo">BH</div>
+          <h1>BunnyHaven</h1>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#donate">Donate</a>
+          <a href="#events">Events</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn btn-adopt" id="adoptBtn">Adopt a Bunny</button>
+          <button class="btn btn-donate">Donate</button>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="menu-panel">
+        <button id="closeMenu">✕ Close</button>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#donate">Donate</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <main id="home" class="container">
+      <section class="hero">
+        <div class="hero-left">
+          <div class="kicker">Welcome to BunnyHaven</div>
+          <h2>Give Love & Hope to<br/>Every Bunny</h2>
+          <p class="lead">BunnyHaven is a non-profit rescue organization dedicated to saving, rehabilitating, and rehoming abandoned and neglected rabbits. Together, we can make every hop count.</p>
+          <div class="cta-group">
+            <button class="btn btn-adopt" style="background:var(--teal-1);color:#fff;border:0" onclick="scrollToSection('#about')">Adopt a Bunny</button>
+            <button class="btn" style="background:transparent;border:2px solid var(--brown);color:var(--brown)" onclick="scrollToSection('#donate')">Donate</button>
+          </div>
+
+          <div class="features" aria-label="Highlights">
+            <div class="feature">
+              <h4>Safe Shelter</h4>
+              <p>Every rescued bunny is provided with a clean, comfortable, and loving temporary home.</p>
+            </div>
+            <div class="feature">
+              <h4>Healthy Meals</h4>
+              <p>We provide fresh veggies, hay, and water daily to ensure every bunny thrives.</p>
+            </div>
+            <div class="feature">
+              <h4>Loving Care</h4>
+              <p>Our volunteers offer socialization, cuddles, and medical care for every rabbit.</p>
+            </div>
+            <div class="feature">
+              <h4>Adoption Programs</h4>
+              <p>We connect kind-hearted families with their future fluffy companions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <img src="https://cottontails-rescue.org.uk/wp-content/uploads/2023/09/DSC04339-fullsize-scaled.jpg" alt="cute bunny">
+            <p class="muted">Join us — help every hop find a home.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about">
+        <div class="about-images">
+          <img src="https://i.pinimg.com/236x/84/1b/70/841b7006de3aa3fc313b2a4ae52c481f.jpg" alt="bunny 1">
+          <img src="https://pics.freeartbackgrounds.com/fullhd/Cute_Brown_Bunny_Background-7.jpg" alt="bunny 2">
+          <img src="https://littlehayco.com/cdn/shop/articles/baby-rabbit-diet_7d22f0ba-9599-408a-a965-07df0615f135.jpg?v=1741167895" alt="bunny 3">
+          <img src="https://i.pinimg.com/736x/02/07/b6/0207b6b5817da1984c2f08693122f32e.jpg" alt="bunny 4">
+        </div>
+
+        <div class="about-text">
+          <h3>Our Story</h3>
+          <div class="meta">
+            <span class="pill">Together, We Build</span>
+            <span class="pill">A Safe Haven for Bunnies</span>
+          </div>
+
+          <h4>Our Mission</h4>
+          <p>Founded in 2024, BunnyHaven has rescued and rehomed over 200 rabbits. We believe every bunny deserves a chance at a happy, healthy life filled with love and safety.</p>
+
+          <h4>Our Vision</h4>
+          <p>Expand our rescue network, increase foster participation, and provide education so all bunnies find loving homes.</p>
+
+          <h4>Next Plan</h4>
+          <ul>
+            <li>Bunny rescue and rehabilitation</li>
+            <li>Community education</li>
+            <li>Volunteer-driven programs</li>
+            <li>Affordable adoption</li>
+          </ul>
+
+          <p><button class="btn" onclick="scrollToSection('#services')" style="background:var(--brown);color:var(--light-gray)">Learn More</button></p>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="services">
+        <div class="container">
+          <h3 class="center">Bunny Care & Rescue Services</h3>
+          <p class="center muted">Comprehensive services designed to keep every rabbit healthy, safe and happy.</p>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <h4>Rescue and Shelter</h4>
+              <p>Rapid response rescue for stranded or surrendered rabbits and safe short-term sheltering.</p>
+            </div>
+            <div class="service-card">
+              <h4>Medical Care and Rehab</h4>
+              <p>On-site basic medical triage and coordination with vets for rehabilitation and recovery.</p>
+            </div>
+            <div class="service-card">
+              <h4>Nutrition and Feeding</h4>
+              <p>Balanced diets, hay, fresh vegetables and feeding plans tailored to each bunny's needs.</p>
+            </div>
+            <div class="service-card">
+              <h4>Adoption Programs</h4>
+              <p>Thorough screening and matching to ensure long-term, loving placements for our rabbits.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Donate -->
+      <section id="donate" style="padding:36px 0">
+        <div class="container">
+          <h3 class="center">Support Our Bunnies</h3>
+          <p class="center muted">Your support keeps our shelter warm, fed, and cared for.</p>
+
+          <div class="donations margin-top-lg">
+            <div class="donation-card">
+              <img src="https://c.files.bbci.co.uk/012e/live/9ca8f5d0-0625-11ef-b9d8-4f52aebe147d.jpg" alt="food">
+              <h4>Sponsor Food & Care</h4>
+              <p>Your monthly donation helps provide nutritious meals and cozy shelter.</p>
+              <p class="margin-top-sm"><button class="btn btn-donate">Donate Now</button></p>
+            </div>
+
+            <div class="donation-card">
+              <img src="https://rabbitawarenessactiongroup.co.uk/wp-content/uploads/2022/05/KMP-Rabbitshoot-45-scaled.jpg" alt="medical">
+              <h4>Support Medical Treatment</h4>
+              <p>Help cover medical care for injured or neglected rabbits.</p>
+              <p class="margin-top-sm"><button class="btn btn-donate">Donate Now</button></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events -->
+      <section id="events" class="events">
+        <div class="container">
+          <h3 class="center">Our Upcoming Events</h3>
+          <p class="center muted">Join our Bunny Love community events — open to everyone.</p>
+
+          <div class="events-grid" style="margin-top:18px">
+            <div class="event">
+              <div class="date">
+                <div class="date-month">Mar</div>
+                <div class="date-day">25</div>
+                <div class="date-type">Adoption Day</div>
+              </div>
+              <div>
+                <h5>Spring Bunny Adoption Fair</h5>
+                <p class="muted">Meet our adorable rabbits and find your furry best friend!</p>
+                <p><button class="btn" onclick="alert('Thanks — we will save your spot!')">Join Now</button></p>
+              </div>
+            </div>
+
+            <div class="event">
+              <div class="date">
+                <div style="font-weight:800">Apr</div>
+                <div style="font-size:20px;font-weight:900">12</div>
+                <div style="font-size:12px">Volunteer Meet & Greet</div>
+              </div>
+              <div>
+                <h5>Spring Volunteer Gathering</h5>
+                <p class="muted">Learn how you can help — orientation and Q&A for new volunteers.</p>
+                <p><button class="btn" onclick="alert('Thanks — we will RSVP you!')">RSVP</button></p>
+              </div>
+            </div>
+
+            <div class="event">
+              <div class="date">
+                <div style="font-weight:800">May</div>
+                <div style="font-size:20px;font-weight:900">10</div>
+                <div style="font-size:12px">Bunny Care Workshop</div>
+              </div>
+              <div>
+                <h5>Healthy Bunny Care 101</h5>
+                <p class="muted">Hands-on workshop covering nutrition, housing, and basic first aid.</p>
+                <p><button class="btn" onclick="alert('Thanks — registration received!')">Register</button></p>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="center" style="margin-top:14px"><button class="btn" onclick="scrollToSection('#contact')">Learn More</button></p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact-footer" class="contact-footer">
+  <div class="container contact-footer-inner">
+    <!-- Contact Info -->
+    <div class="info">
+      <h4>Contact Us</h4>
+      <p>Email: <a href="mailto:info@bunnyhaven.org">info@bunnyhaven.org</a></p>
+      <p>Phone: <a href="tel:+1234567890">+1 (234) 567‑890</a></p>
+      <p>Address: 123 Bunny Lane, Greenfield, YourCountry</p>
+    </div>
+
+    <!-- Map Placeholder -->
+
+    <!-- Footer Text -->
+    <div class="footer-text center">
+      <strong>BunnyHaven</strong> © <span id="year"></span> | All Rights Reserved
+    </div>
+  </div>
+</section>
+
+    </main>
+  </div>
+
+  <script src=script.js>
+   
+  </script>
+</body>
+</html>
