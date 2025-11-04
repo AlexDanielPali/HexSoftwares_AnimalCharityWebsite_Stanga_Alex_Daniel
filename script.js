@@ -18,7 +18,7 @@
     }
 
     // show current year
-    document.getElementById('year').textContent = new Date().getFullYear();
+   document.getElementById('year').textContent = new Date().getFullYear();
 
     // keyboard accessible close
     document.addEventListener('keydown', (e)=>{
